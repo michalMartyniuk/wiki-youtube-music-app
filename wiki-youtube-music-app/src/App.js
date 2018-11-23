@@ -103,7 +103,6 @@ class App extends Component {
   }
 
   selectVideoHandler = selected => {
-    console.log(selected)
     this.setState(
       {
         selected,
