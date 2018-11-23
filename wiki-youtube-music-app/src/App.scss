@@ -1,0 +1,77 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  margin: auto;
+}
+
+.switch-buttons {
+  display: flex;
+  justify-content: center;
+  width: 560px;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.video-list-button {
+  flex: 1;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  margin-right: 1rem;
+  padding: .5rem 0;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-color: orange;
+  }
+}
+
+.wiki-info-button {
+  flex: 1;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  padding: .5rem 0;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-color: orange;
+  }
+
+}
+.select-wrapper {
+  background-color: #ffe69c;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 560px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select__label {
+  margin-right: 1rem;
+}
+
+.select__select {
+  flex: 1;
+}
+
+.selected-wrapper {
+  background-color: #ffe69c;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 560px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
