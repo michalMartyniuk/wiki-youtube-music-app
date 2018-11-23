@@ -22,6 +22,18 @@ const selectOptions = [
   { value: '10', label: '10' }
 ];
 
+const resultOptions = [
+  { value: "1", label: "1" },
+  { value: "5", label: "5" },
+  { value: "10", label: "10" },
+  { value: "15", label: "15" },
+  { value: "10", label: "10" },
+  { value: "20", label: "20" },
+  { value: "30", label: "30" },
+  { value: "40", label: "40" },
+  { value: "50", label: "50" }
+]
+
 const youtube_API_KEY = "AIzaSyAEQUAqUpwWqNcNQ2Dw1iqKo3ggrVOs8Ok"
 
 class App extends Component {
@@ -29,7 +41,8 @@ class App extends Component {
     super(props)
     this.state = {
       selectedOption: null,
-      search: "",
+      resultOption: "10",
+      search: "Rolling Stones - Paint it Black",
       videos: [],
       videoTitle: null,
       selected: null,
@@ -38,8 +51,8 @@ class App extends Component {
       wikiInfoState: false
     }
 
-    this.search('Pearl Jam - Black')
-    this.wikiSearch('Pearl Jam - Black')
+    this.search(this.state.search)
+    this.wikiSearch(this.state.search)
   }
 
   handleChange = (selectedOption) => {
@@ -56,7 +69,7 @@ class App extends Component {
 
   search(searchEntry) {
     var opts = {
-      maxResults: 10,
+      maxResults: this.state.resultOption.value,
       key: youtube_API_KEY,
     };
      
@@ -115,8 +128,11 @@ class App extends Component {
     )
   }
 
-  resultsHandleChange = selectedOption => {
-    
+  resultsHandleChange = resultOption => {
+    this.setState(
+      { resultOption },
+      () => this.search(this.state.search)
+    );
   }
 
   render() {
@@ -127,9 +143,9 @@ class App extends Component {
         <h2 className="select__label">Results number: </h2>
         <div className="select__select">
           <Select
-            value={this.state.resultsNumber}
+            value={this.state.resultsOption}
             onChange={this.resultsHandleChange}
-            options={selectOptions}
+            options={resultOptions}
           />
         </div>
       </div>
@@ -190,6 +206,7 @@ class App extends Component {
         </div> : null}
         {rate}
         {rated}
+        {resultsNumber}
         <WikiInfo
           state={this.state.wikiInfoState}
           wikiInfo={this.state.wikiInfo}
