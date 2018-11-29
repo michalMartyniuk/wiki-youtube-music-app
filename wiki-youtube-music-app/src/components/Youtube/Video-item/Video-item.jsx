@@ -1,5 +1,5 @@
 import React from 'react'
-import './VideoListItem.scss'
+import './Video-item.scss'
 
 const VideoListItem = ({ video, videoSelect }) => {
   const imageUrl = video.thumbnails.medium.url
