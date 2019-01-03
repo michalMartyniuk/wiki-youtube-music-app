@@ -8,7 +8,7 @@ Application enables searching for youtube videos using youtube API and shows inf
 
 ### Technologies:
 - HTML
-- CSS
+- CSS (SCSS)
 - Javascript
 - React
 - Node
