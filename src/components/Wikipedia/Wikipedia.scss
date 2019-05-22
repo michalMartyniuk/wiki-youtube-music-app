@@ -1,0 +1,41 @@
+.wiki-info {
+  width: 560px;
+  margin: auto;
+  margin-top: 1rem;
+  border: 1px solid #9E9E9E;
+  border-radius: 5px;
+  padding: 2rem;
+
+  &__wrapper {
+    display: flex;
+    margin: .2rem;
+  }
+  &__label {
+    width: 25%;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  &__text {
+    font-size: 1.4rem;
+  }
+  &__title {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__minutes {
+    font-size: 1.4rem;
+  }
+  &__seconds {
+    font-size: 1.4rem;
+  }
+
+  
+
+
+  &__description {
+    font-size: 1.2rem;
+  }
+}
