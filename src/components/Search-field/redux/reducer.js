@@ -1,7 +1,7 @@
 import { INPUT_CHANGE } from './actionTypes'
 
 export const searchReducer = (state = {
-  value: "Rolling Stones - Paint it Black",
+  value: "",
 }, action) => {
   switch (action.type) {
 

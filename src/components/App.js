@@ -13,7 +13,7 @@ import { wikipediaSearch } from './Wikipedia/redux/actions'
 class App extends Component {
   constructor(props) {
     super(props)
-    this.props.searchVideos(this.props.search.value)
+    // this.props.searchVideos(this.props.search.value)
   }
 
   render() {
